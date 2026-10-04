@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style_index.css">  
+        <meta http-equiv="refresh" content="2">
+        <title>Generic Fashion Website</title>
+    </head>
+    <body>
+        {% for i in arduinosNum %} 
+            <h1>Data Greenhouse ID: {{ statistics[i]["arduinoID"]}}</h1>
+            <h3>Timestamp: {{ statistics[i]["time"] }}</h3>
+            <h3>Relative humidity: {{ statistics[i]["humidity"] }} %</h3>
+            <h3>Temperature: {{ statistics[i]["temperature"] }} &deg;C</h3>
+            <h3>Brightness: {{statistics[i]["brightness"]}} W/m2</h3>
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Relative Humidity[%]</th>
+                    <th>Temperature[&deg;C]</th>
+                    <th>Brightness[W/m2]</th>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td>{{ statistics[i]["averageHumidity"]}}</td>
+                    <td>{{ statistics[i]["averageTemperature"]}}</td>
+                    <td>{{ statistics[i]["averageBrightness"]}}</td>
+                </tr>
+                <tr>
+                    <td>Maximum Values</td>
+                    <td>{{ statistics[i]["humidityMax"]}}</td>
+                    <td>{{ statistics[i]["temperatureMax"]}}</td>
+                    <td>{{ statistics[i]["brightnessMax"]}}</td>
+                </tr>
+                <tr>
+                    <td>Minimum Values</td>
+                    <td>{{ statistics[i]["humidityMin"]}}</td>
+                    <td>{{ statistics[i]["temperatureMin"]}}</td>
+                    <td>{{ statistics[i]["brightnessMin"]}}</td>
+                </tr>
+              </table>
+
+        {% endfor %} 
+    </body>
+</html>

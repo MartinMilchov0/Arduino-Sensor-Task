@@ -1,0 +1,13 @@
+body {
+background-color: bisque; 
+font-family: 'Times New Roman', Times, serif;
+font-size: 1em;
+}
+table,tr,td{
+border-radius:6px;
+height: 3.5em;
+border:1px solid black;
+text-align:center;
+padding:5px;
+margin:20px;
+}
